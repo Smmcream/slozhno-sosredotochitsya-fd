@@ -116,7 +116,7 @@
 .header {
   display: grid;
   block-size: 100%;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   position: relative;
 }
 
@@ -125,10 +125,11 @@
   color: var(--highlight-color, #000028);
   background: var(--accent-color, #ff0070);
   font-size: 18px;
-  word-wrap: break-word;
+  align-self: center; 
   overflow-wrap: break-word;
-  hyphens: auto;
-  align-self: center;
+  hyphens: auto; 
+  height: fit-content;
+  margin: 0;
 }
 
 .header__theme-menu {
@@ -180,11 +181,10 @@
 
 .section {
   display: grid;
-  gap: 20px;
 }
 
 .section-gallery {
-  gap: 10px;
+  gap: 20px;
 }
 
 .section-how__title {
@@ -192,18 +192,18 @@
 }
 
 .section-how {
-  gap: 20px;
+  gap: 15px;
   line-height: normal;
 }
 
 .articles-list {
   display: grid;
-  gap: 20px;
+  gap: 16px;
 }
 
 .article {
   display: grid;
-  gap: 10px;
+  gap: 9px;
 }
 
 .gallery-list {
@@ -212,7 +212,7 @@
 }
 
 .gallery-list__item-img {
-  display: block;
+  display: grid;
   object-fit: cover;
   object-position: center;
   width: 100%;
