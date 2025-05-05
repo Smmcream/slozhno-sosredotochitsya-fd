@@ -16,8 +16,8 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   margin: 0;
-  justify-self: start; 
-  width: 100%; 
+  justify-self: start;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -313,14 +313,11 @@ footer {
     display: inline-block;
     height: fit-content;
     width: 100%;
+    align-self: flex-start; 
   }
 
   .content-section {
     column-gap: 32px;
-  }
-
-  .article-title_decorated {
-    align-self: flex-start; 
   }
 
   .article-card {
