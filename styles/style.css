@@ -61,22 +61,24 @@
 
 .text-link {
   text-decoration: none;
+  position: relative;
 }
 
-.text-link:hover {
-  text-decoration: underline;
+.link:hover {
+  text-decoration: none;
 }
 
 .text-link:focus {
   outline: 0;
 }
 
-.text-link:focus-visible {
+.link:focus-visible {
   outline: 1px solid currentColor;
 }
 
 .rec-decor {
   position: absolute;
+  color: var(--accent-color, #ff0070);
   z-index: -1;
   display: inline-flex;
   align-items: center;
@@ -95,11 +97,13 @@
 .rec-decor::after {
   content: "";
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 50%;
   background: var(--accent-color, #ff0070);
   box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
+  padding-left: 0;
+  justify-content: center;
 }
 
 .section-title {
@@ -210,18 +214,19 @@
 }
 
 footer {
+  min-height: 668px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
 }
 
 .footer-title {
   color: var(--brand-color, #db00ff);
   place-items: center;
   justify-content: center;
-  height: 700;
+  min-height: 700;
   font-size: 120px;
+  margin-left: 20px;
 }
 
 .advice-article__title {
@@ -333,7 +338,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer-title {
-    font-size: 157px;
-}
+ .footer-title {
+  font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
+ }
 }
