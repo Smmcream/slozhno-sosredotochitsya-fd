@@ -219,7 +219,7 @@
   padding: 40px 10px;
 }
 
-footer {
+.footer {
   min-height: 668px;
   height: 100vh;
   display: flex;
@@ -235,6 +235,12 @@ footer {
   min-height: 700;
   font-size: 120px;
   margin-left: 20px;
+}
+
+.footer .decorated-zone {
+  position: relative;
+  display: block; 
+  height: 100vh;
 }
 
 .advice-article__title {
