@@ -1,4 +1,4 @@
-:root.theme_dark {
+:root.theme-dark {
   --text-color: var(--color-pink-2, #f1b2ce);
   --brand-color: var(--color-purple-1, #db00ff);
   --secondary-color: var(--color-purple-2, #ff0070);
