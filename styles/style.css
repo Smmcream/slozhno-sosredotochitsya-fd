@@ -8,6 +8,8 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  min-height: 100vh;
+
 }
 
 .page-title {
@@ -108,8 +110,7 @@
 
 .section-title {
   color: var(--secondary-color, #ff0070);
-  display: inline-block;
-  width: 100%;
+  font-weight: 700;
   font-size: inherit;
   line-height: inherit;
 }
@@ -117,8 +118,6 @@
 .section-title_decorated {
   color: var(--highlight-color, #000028);
   background: var(--accent-color, #ff0070);
-  display: inline-block;
-  width: 100%;
 }
 
 .content-section {
@@ -160,8 +159,8 @@
 .header {
   align-items: start;
   padding-left: 10px;
-  min-height: 668px;
   height: 100vh;
+  min-height: 668px;
   box-sizing: border-box;
 }
 
@@ -220,8 +219,8 @@
 }
 
 .footer {
-  min-height: 668px;
   height: 100vh;
+  min-height: 668px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,20 +229,7 @@
 
 .footer-title {
   color: var(--brand-color, #db00ff);
-  place-items: center;
-  justify-content: center;
-  min-height: 700;
-  font-size: 120px;
-  margin-left: 20px;
-}
-
-.footer .decorated-zone {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
 .advice-article__title {
@@ -267,17 +253,12 @@
     top: 20px;
   }
 
-  .header {
-    padding-left: 0px;
-  }
-
   .page-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .content-section {
     grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
-    margin-right: 7px;
   }
 
   .content-section_what .articles-list {
@@ -286,12 +267,12 @@
 
   .content-section_gallery {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 20px;
   }
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 20px;
   }
 
   .gallery__item:first-child,
@@ -329,6 +310,10 @@
     text-shadow: 4px 4px 0 var(--color-purple-2, #ff0070);
   }
 
+  .header {
+    padding-left: 0px;
+  }
+
   .header__theme-menu {
     justify-self: center;
     margin-left: 20px;
@@ -346,8 +331,7 @@
   }
 
   .content-section {
-    column-gap: 35px;
-    margin: 0;
+    column-gap: 32px;
   }
 
   .article-card {
