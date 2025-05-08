@@ -239,8 +239,11 @@
 
 .footer .decorated-zone {
   position: relative;
-  display: block; 
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .advice-article__title {
@@ -339,9 +342,7 @@
 
   .article-title_decorated {
     display: inline-block;
-    height: fit-content;
     width: 100%;
-    align-self: flex-start;
   }
 
   .content-section {
@@ -361,8 +362,4 @@
   .content-section_what .articles-list {
     grid-template-columns: repeat(3, 1fr);
   }
-
- .footer-title {
-  font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
- }
 }
