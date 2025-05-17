@@ -1,4 +1,3 @@
-
 .page {
   font-family: var(--page-font-family, "IBM Plex mono", monospace);
   font-size: 18px;
@@ -28,9 +27,8 @@
 
 .cover {
   display: grid;
-  min-height: 100vh;
+  min-height: 668px;
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
-  padding-left: 0;
 }
 
 .decorated-zone {
@@ -42,8 +40,8 @@
   content: "";
   position: absolute;
   z-index: -1;
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .decorated-zone::before {
@@ -65,12 +63,13 @@
   position: relative;
 }
 
-.link:hover {
-  text-decoration: none;
+.text-link:hover {
+  border-bottom: 1px solid currentColor;
 }
 
 .text-link:focus {
-  outline: 0;
+  outline: none;
+  border: 1px solid currentColor;
 }
 
 .link:focus-visible {
@@ -79,14 +78,15 @@
 
 .rec-decor {
   position: absolute;
+  top: 10px;
+  right: 19px;
   color: var(--accent-color, #ff0070);
   z-index: -1;
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
   visibility: var(--rec-decor-visibility, visible);
-  right: 20px;
-  top: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .rec-decor::before {
@@ -98,13 +98,11 @@
 .rec-decor::after {
   content: "";
   display: inline-block;
-  min-width: 10px;
-  min-height: 10px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 2px 2px var(--accent-color);
   border-radius: 50%;
-  background: var(--accent-color, #ff0070);
-  box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
-  padding-left: 0;
-  justify-content: center;
+  width: 9px;
+  height: 9px;
 }
 
 .section-title {
@@ -226,9 +224,10 @@ footer {
   color: var(--brand-color, #db00ff);
   place-items: center;
   justify-content: center;
-  min-height: 700;
-  font-size: 120px;
-  margin-left: 20px;
+  font-size: clamp(7.5rem, 0.75rem + 14.0625vw, 9.75rem);
+  line-height: 83%;
+  text-shadow: 2px 2px 0px var(--color-purple-2, #ff0070);
+  font-size: 116px;
 }
 
 .advice-article__title {
@@ -242,58 +241,55 @@ footer {
 .article-title {
   color: var(--highlight-color, #000028);
   background: var(--accent-color, #ff0070);
-  font-weight: 700;
+  font-weight: 400;
   font-size: inherit;
 }
 
-@media (width >= 768px) {
-  .rec-decor {
-    right: 28px;
-    top: 20px;
-  }
+.advice-article__title {
+  font-weight: 700;
+}
 
+@media (width >= 768px) {
+  .cover.header {
+    padding-left: 3px;
+  }
+  .rec-decor {
+    top: 20px;
+    right: 29px;
+  }
   .page-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-
   .content-section {
     grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
   }
-
   .content-section_what .articles-list {
     grid-column: span 2;
   }
-
   .content-section_gallery {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-
   .gallery__item:first-child,
   .gallery__item:last-child {
     grid-column: span 2;
   }
-
   .gallery__item:nth-child(2),
   .gallery__item:nth-child(3) {
     grid-row: span 2;
   }
-
   .header__theme-menu {
     margin-top: 170px;
     margin-bottom: 70px;
   }
-
   .header__title {
     justify-self: end;
     width: clamp(364px, calc(100% / 2 - 10px), 491px);
   }
-
   .main {
     gap: 80px;
     padding: 60px 20px;
@@ -304,43 +300,39 @@ footer {
   .page-title {
     text-shadow: 4px 4px 0 var(--color-purple-2, #ff0070);
   }
-
+  .rec-decor {
+    top: 20px;
+    right: 29px;
+  }
   .header__theme-menu {
     justify-self: center;
     margin-left: 20px;
     margin-top: 0;
     margin-bottom: 215px;
   }
-
   .header__theme-menu-list {
     flex-direction: row;
   }
-
   .article-title_decorated {
     display: inline-block;
     height: fit-content;
     width: 100%;
     align-self: flex-start;
   }
-
   .content-section {
     column-gap: 32px;
   }
-
   .article-card {
     display: flex;
     flex-direction: column;
   }
-
   .articles-title {
     grid-row: 1;
   }
-
   .content-section_what .articles-list {
     grid-template-columns: repeat(3, 1fr);
   }
-
- .footer-title {
-  font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
- }
+  .footer-title {
+    font-size: clamp(9.8125rem, 9.8125rem + 0vw, 9.8125rem);
+  }
 }
