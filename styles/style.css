@@ -224,14 +224,14 @@ footer {
   color: var(--brand-color, #db00ff);
   place-items: center;
   justify-content: center;
-  font-size: clamp(7.5rem, 0.75rem + 14.0625vw, 9.75rem);
+  font-size: clamp(116px, 103px + 3.47vw, 157px);
   line-height: 83%;
   text-shadow: 2px 2px 0px var(--color-purple-2, #ff0070);
-  font-size: 116px;
 }
 
 .advice-article__title {
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .advice-article__list {
@@ -243,10 +243,6 @@ footer {
   background: var(--accent-color, #ff0070);
   font-weight: 400;
   font-size: inherit;
-}
-
-.advice-article__title {
-  font-weight: 700;
 }
 
 @media (width >= 768px) {
