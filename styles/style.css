@@ -22,7 +22,7 @@
 }
 
 .shadow-decor {
-  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
 .cover {
@@ -241,8 +241,14 @@ footer {
 .article-title {
   color: var(--highlight-color, #000028);
   background: var(--accent-color, #ff0070);
-  font-weight: 400;
+  font-weight: 700;
   font-size: inherit;
+}
+
+.article-title_thin {
+  color: var(--highlight-color, #000028);
+  background: var(--accent-color, #ff0070);
+  font-weight: 400;
 }
 
 @media (width >= 768px) {
@@ -289,6 +295,10 @@ footer {
   .main {
     gap: 80px;
     padding: 60px 20px;
+  }
+
+  .footer-title {
+    font-size: 120px;
   }
 }
 
